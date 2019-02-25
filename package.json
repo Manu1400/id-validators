@@ -2,12 +2,12 @@
   "name": "id-validators",
   "version": "0.1.0",
   "description": "Validate IDs around the world",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest test/*",
     "install": "napa",
     "postinstall": "patch-package",
-    "lint": "eslint src/**",
+    "lint": "eslint src/** test/**",
     "lint:fix": "eslint src/** --fix"
   },
   "napa": {
@@ -201,12 +201,14 @@
     "za-id-validator": "0.0.4"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "codice-fiscale-js": "^2.1.0",
     "container-validator": "^1.1.0",
     "current-week-number": "^1.0.7",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jasmine": "^2.10.1",
     "fake-identity": "^1.0.6",
     "gennames": "0.0.2",
     "i18n-iso-countries": "^3.7.8",

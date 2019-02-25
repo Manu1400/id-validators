@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jasmine": true
     },
     "extends": "airbnb-base",
     "globals": {
@@ -21,6 +22,8 @@
       "no-process-env": "warn",
       "no-var": "warn",
       "init-declarations": ["error", "never", { "ignoreForLoopInit": true }],
-      "no-unused-vars": "off"
-    }
+      "no-unused-vars": "off",
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}]
+    },
+    "plugins": ["jasmine"]
 }

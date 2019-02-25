@@ -1,7 +1,7 @@
 // Europe
-const { verify } = require('euro-banknote-serialnumber')
+// const { verify } = require('euro-banknote-serialnumber')
 
-module.exports.euroBanknoteSN = verify
+// module.exports.euroBanknoteSN = verify
 
 // https://fr.wikipedia.org/wiki/Aadhaar
 const { isValidNumber } = require('aadhaar-validator').isValidNumber
