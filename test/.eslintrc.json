@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jasmine": true
     },
     "extends": [
       "airbnb-base",
@@ -27,11 +28,12 @@
       "no-unused-vars": "off",
       "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}],
       "this/no-this": "warn",
-      "optimize-regex/optimize-regex": "warn",
       "import/no-absolute-path": "error",
-      "import/no-commonjs": "off"
+      "import/no-commonjs": "off",
+      "import/no-nodejs-modules": ["error", {"allow": ["assert"]}]
     },
     "plugins": [
+      "jasmine",
       "json",
       "this",
       "optimize-regex"
