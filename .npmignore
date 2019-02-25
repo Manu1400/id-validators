@@ -13,4 +13,6 @@ ideas.md
 node_modules
 .eslintrc.js
 .gitignore
+.gitattributes
 .eslintignore
+.huskyrc.json

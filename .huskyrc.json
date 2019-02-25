@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "pre-commit": "eslint . --quiet --max-warnings 200"
+  }
+}

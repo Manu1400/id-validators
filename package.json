@@ -8,8 +8,8 @@
     "install": "napa",
     "postinstall": "patch-package",
     "lint": "eslint src/** test/**",
-    "lint:fix": "eslint src/** --fix",
-    "precommit": "eslint ."
+    "lint:all": "eslint .",
+    "lint:fix": "eslint src/** --fix"
   },
   "napa": {
     "okpd_to_okpd2": "inveksystems/okpd_to_okpd2",
