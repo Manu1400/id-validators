@@ -1,0 +1,13 @@
+diff --git a/node_modules/polish-id-card-validate/package.json b/node_modules/polish-id-card-validate/package.json
+index 91adbdb..616d6ec 100644
+--- a/node_modules/polish-id-card-validate/package.json
++++ b/node_modules/polish-id-card-validate/package.json
+@@ -30,8 +133,6 @@
+   },
+   "bundleDependencies": false,
+   "dependencies": {
+-    "eslint": "^4.13.1",
+-    "jest": "^22.0.3"
+   },
+   "deprecated": false,
+   "description": "Polish personal ID card validator.",
