@@ -13,3 +13,4 @@ ideas.md
 node_modules
 .eslintrc.js
 .gitignore
+.eslintignore

@@ -5,7 +5,10 @@
         "node": true,
         "jasmine": true
     },
-    "extends": "airbnb-base",
+    "extends": [
+      "airbnb-base",
+      "node"
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -23,7 +26,17 @@
       "no-var": "warn",
       "init-declarations": ["error", "never", { "ignoreForLoopInit": true }],
       "no-unused-vars": "off",
-      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}]
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}],
+      "this/no-this": "warn",
+      "optimize-regex/optimize-regex": "warn",
+      "import/no-absolute-path": "error",
+      "import/no-commonjs": "off",
+      "import/no-nodejs-modules": ["error", {"allow": ["assert"]}]
     },
-    "plugins": ["jasmine"]
+    "plugins": [
+      "jasmine",
+      "json",
+      "this",
+      "optimize-regex"
+    ]
 }
