@@ -1,41 +1,20 @@
 {
     "env": {
-        "browser": true,
-        "es6": true,
-        "node": true,
-        "jasmine": true
+      "jasmine": true
     },
     "extends": [
-      "airbnb-base",
-      "node"
+      "../.eslintrc.json",
+      "plugin:jest/recommended"
     ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
     "rules": {
-      "global-require": "off",
-      "semi": "off",
-      "no-process-exit": "error",
-      "no-buffer-constructor": "warn",
-      "no-process-env": "warn",
-      "no-var": "warn",
-      "init-declarations": ["error", "never", { "ignoreForLoopInit": true }],
-      "no-unused-vars": "off",
-      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}],
-      "this/no-this": "warn",
-      "import/no-absolute-path": "error",
-      "import/no-commonjs": "off",
-      "import/no-nodejs-modules": ["error", {"allow": ["assert"]}]
+      "import/no-nodejs-modules": ["error", {"allow": ["assert"]}],
+      "jest/prefer-todo": "warn",
+      "mocha/no-global-tests": "warn",
+      "mocha/no-nested-tests": "error"
     },
     "plugins": [
       "jasmine",
-      "json",
-      "this",
-      "optimize-regex"
+      "jest",
+      "mocha"
     ]
 }

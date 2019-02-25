@@ -6,11 +6,11 @@ const { utils } = require('./../../src/index')
 // todo : add timeout https://mochajs.org/#suite-level
 
 describe('euro banknote serial number', () => {
-  it('empty string', () => {
+  it.todo('empty string', () => {
     chai.expect(utils.euroBanknoteSN('')).to.equal(false)
   })
 
-  it('valid serial number', () => {
+  it.todo('valid serial number', () => {
     // chai.expect(utils.euroBanknoteSN('')).to.equal(true)
   })
 })

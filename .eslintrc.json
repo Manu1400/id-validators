@@ -29,11 +29,13 @@
       "this/no-this": "warn",
       "optimize-regex/optimize-regex": "warn",
       "import/no-absolute-path": "error",
-      "import/no-commonjs": "off"
+      "import/no-commonjs": "off",
+      "better/no-deletes": "warn"
     },
     "plugins": [
       "json",
       "this",
-      "optimize-regex"
+      "optimize-regex",
+      "better"
     ]
 }
