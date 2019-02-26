@@ -3,18 +3,29 @@
       "jasmine": true
     },
     "extends": [
-      "../.eslintrc.json",
-      "plugin:jest/recommended"
+      "../src/.eslintrc.json",
+      "plugin:jest/recommended",
+      "plugin:unicorn/recommended"
     ],
     "rules": {
       "import/no-nodejs-modules": ["error", {"allow": ["assert"]}],
       "jest/prefer-todo": "warn",
       "mocha/no-global-tests": "warn",
-      "mocha/no-nested-tests": "error"
+      "mocha/no-nested-tests": "error",
+      "better/no-exports": "warn",
+      "better/no-new": "warn",
+      "better/no-whiles": "warn",
+      "mocha-cleanup/no-empty-title": "warn",
+      "mocha-cleanup/complexity-it": ["warn", {"maxAllowedComplexity": 15}],
+      "mocha-cleanup/disallow-stub-window": "warn",
+      "mocha-cleanup/asserts-limit": ["warn", {"assertsLimit": 10}]
     },
     "plugins": [
       "jasmine",
       "jest",
-      "mocha"
+      "mocha",
+      "better",
+      "unicorn",
+      "mocha-cleanup"
     ]
 }

@@ -11,7 +11,7 @@ lib/*
 ideas.md
 
 node_modules
-.eslintrc.js
+src/.eslintrc.js
 .gitignore
 .gitattributes
 .eslintignore

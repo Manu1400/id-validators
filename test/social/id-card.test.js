@@ -1,6 +1,6 @@
 const assert = require('assert')
 const chai = require('chai')
-const { idCard } = require('./../../src/index')
+const { idCard } = require('./../../src')
 
 describe('German ID Card', () => {
   it('valid ID Card', () => {

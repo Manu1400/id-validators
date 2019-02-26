@@ -1,0 +1,56 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "node"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+      "global-require": "off",
+      "semi": "off",
+      "no-process-exit": "error",
+      "no-buffer-constructor": "warn",
+      "no-process-env": "warn",
+      "no-var": "warn",
+      "init-declarations": ["error", "never", { "ignoreForLoopInit": true }],
+      "no-unused-vars": "off",
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}],
+      "this/no-this": "warn",
+      "optimize-regex/optimize-regex": "warn",
+      "import/no-absolute-path": "error",
+      "import/no-commonjs": "off",
+      "better/no-deletes": "warn",
+      "unicorn/no-abusive-eslint-disable": "warn",
+      "unicorn/no-unsafe-regex": "warn",
+      "perf-standard/check-function-inline": "warn",
+      "no-restricted-imports": ["error", "q-io/fs", "q-io/fs-mock", "optimist", "winston", "nodemailer", "daemon"],
+      "radix": "error",
+      "max-params": ["error", 3],
+      "max-params": ["warn", 2],
+      "no-undefined": "error",
+      "import/no-unresolved": "warn",
+      "import/no-nodejs-modules": ["error", {"allow": ["okpd_to_okpd2", "parser-okved2"]}]
+    },
+    "plugins": [
+      "json",
+      "this",
+      "optimize-regex",
+      "better",
+      "unicorn",
+      "perf-standard"
+    ],
+    "settings": {
+      "import/core-modules": [ "okpd_to_okpd2", "parser-okved2" ]
+    }
+}
