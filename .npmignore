@@ -16,3 +16,4 @@ src/.eslintrc.js
 .gitattributes
 .eslintignore
 .huskyrc.json
+codecov.yml
