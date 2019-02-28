@@ -5,16 +5,16 @@ const { utils } = require('./../../src')
 
 // todo : add timeout https://mochajs.org/#suite-level
 
-describe('euro banknote serial number', () => {
-  it.todo('empty string', () => {
-    chai.expect(utils.euroBanknoteSN('')).to.equal(false)
-  })
+//describe('euro banknote serial number', () => {
+  //it('empty string', () => {
+  //  chai.expect(utils.euroBanknoteSN('')).to.equal(false)
+  //})
 
   // TODO: eslint -> create issue
-  test.todo('', () => {
-  })
+  //test.todo('', () => {
+  //})
 
-  it.todo('valid serial number', () => {
+  //it.todo('valid serial number', () => {
     // chai.expect(utils.euroBanknoteSN('')).to.equal(true)
-  })
-})
+  //})
+//})
