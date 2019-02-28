@@ -4,6 +4,7 @@ node_js:
 cache: npm
 install:
   - npm install -g jest
+  - npm install -g chai
   - npm install -g codecov
 before_test:
   - codecov -t $CODECOV_TOKEN || echo 'Codecov failed to upload'
