@@ -8,4 +8,5 @@ install:
   - npm install --only=dev
   - npm install
   - npm install -g codecov
+  - jest test/*
   - codecov -t $CODECOV_TOKEN || echo 'Codecov failed to upload'
