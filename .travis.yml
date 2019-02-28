@@ -5,5 +5,4 @@ cache: npm
 install:
   - npm install -g codecov
 script:
-  - codecov -t CODECOV_TOKEN
-  - bash <(curl -s https://codecov.io/bash) || echo 'Codecov failed to upload'
+  - codecov -t $CODECOV_TOKEN || echo 'Codecov failed to upload'
