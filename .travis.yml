@@ -3,6 +3,7 @@ node_js:
   - "10"
 cache: npm
 install:
+  - npm install -g jest
   - npm install -g codecov
 before_test:
   - codecov -t $CODECOV_TOKEN || echo 'Codecov failed to upload'
