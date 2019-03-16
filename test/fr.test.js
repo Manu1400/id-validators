@@ -1,5 +1,3 @@
-const { expect } = require('chai')
-
 const { FPS } = require('./../src/FR/FR')
 
 describe('#NIR', () => {
@@ -7,8 +5,8 @@ describe('#NIR', () => {
   const myNIR = nirGenerator.generateNir()
 
   it('auto-test nir-generator', () => {
-    expect(Boolean(myNIR.match(nirGenerator.nirRegex))).to.equal(true)
-    expect(myNIR.match(nirGenerator.nirRegex).length).to.equal(1)
+    expect(Boolean(myNIR.match(nirGenerator.nirRegex))).toBe(true)
+    expect(myNIR.match(nirGenerator.nirRegex).length).toBe(1)
   })
 })
 
@@ -16,18 +14,18 @@ describe('#NIR', () => {
 describe('FPS number validation (France only)', () => {
   // exemple from https://twitter.com/Ooalan/status/972167129586954241
   it('valid real FPS number (Bordeaux), Urbis Park', () => {
-    expect(FPS('21330063500017181068066029', 'EB172HB', '09/03/2018')).to.equal(true)
+    expect(FPS('21330063500017181068066029', 'EB172HB', '09/03/2018')).toBe(true)
   })
 
   // exemple from https://twitter.com/KinstlerPatrick/status/1017444552033144832
   it('valid real FPS number (Paris 12e), Streeteo', () => {
-    expect(FPS('21750001600019-181193050137', 'DP936HW', '12/07/2018')).to.equal(true)
+    expect(FPS('21750001600019-181193050137', 'DP936HW', '12/07/2018')).toBe(true)
   })
 
   // example from https://twitter.com/maxence_wp/status/948468476485799936
   it('valid real FPS number (Paris 1e), from MOOVIA, 2018', () => {
     // key from https://fps-stationnement.fr/questions/numero-telepaiement-perdu.php
-    expect(FPS('21750001600019183002025066', 'CE-501-VF', '02/01/2018', '72')).to.equal(true)
+    expect(FPS('21750001600019183002025066', 'CE-501-VF', '02/01/2018', '72')).toBe(true)
   })
 
   // example from https://twitter.com/JM_1979/status/1086033313490444290
@@ -61,27 +59,27 @@ describe('FPS number validation (France only)', () => {
 
   // example from https://img.bfmtv.com/i/0/0/ec1/9e39968900670213bd9bf29f4771e.jpeg
   it('valid real FPS number (Paris), 2018', () => {
-    expect(FPS('21750001600019-182008114031')).to.equal(true)
+    expect(FPS('21750001600019-182008114031')).toBe(true)
   })
 
   it('valid plate number but empty FPS number', () => {
-    expect(FPS('', 'CE-501-VF')).to.equal(false)
-    expect(FPS('', 'FB-308-YK')).to.equal(false)
+    expect(FPS('', 'CE-501-VF')).toBe(false)
+    expect(FPS('', 'FB-308-YK')).toBe(false)
   })
 
   it('wrong FPS number: year before 2018', () => {
-    expect(FPS('21750001600019-171193050137')).to.equal(false)
+    expect(FPS('21750001600019-171193050137')).toBe(false)
   })
 
   it('wrong FPS number: year after 2018', () => {
-    expect(FPS('21750001600019-991193050137')).to.equal(false)
+    expect(FPS('21750001600019-991193050137')).toBe(false)
   })
 
   it('wrong FPS number: wrong date in FPS number', () => {
-    expect(FPS('21750001600019-181999050137')).to.equal(false)
+    expect(FPS('21750001600019-181999050137')).toBe(false)
   })
 
   it('wrong FPS number: wrong SIRET', () => {
-    expect(FPS('00050001600019-181193050137')).to.equal(false)
+    expect(FPS('00050001600019-181193050137')).toBe(false)
   })
 })

@@ -2,15 +2,13 @@
 /* eslint-disable no-unused-expressions */
 
 //const assert = require('assert')
-const { expect } = require('chai')
-
-const isbn = require('./../src/isbn')
+const isbn = require('./../src/isbn');
 
 describe('ISBN validation', () => {
   it('parse ISBN and extract ISBN domain', () => {
-    expect(isbn.getDomain('978-600-119-125-1')).to.equal(600) // groupname: "Iran"
+    expect(isbn.getDomain('978-600-119-125-1')).toBe(600) // groupname: "Iran"
 
-    expect(isbn.checkDomain(isbn.getDomain('978-600-119-125-1'))).to.equal(true)
+    expect(isbn.checkDomain(isbn.getDomain('978-600-119-125-1'))).toBe(true)
   })
 
   // TODO: Add 99937 	Macao
@@ -31,7 +29,7 @@ describe('ISBN-13/979, International Standard Music Number validation', () => {
   it('valid ISMN', () => {
     // new prefix (> 2009) : 979-0
     //expect(isbn.isbn13('979-0-7284-1743-3')).to.equal(false)
-    expect(isbn.checkDomain('979', '979-0-7284-1743-3')).to.equal(true)
-    expect(isbn.checkIsbn('979-0-7284-1743-3')).to.be.true
+    expect(isbn.checkDomain('979', '979-0-7284-1743-3')).toBe(true)
+    expect(isbn.checkIsbn('979-0-7284-1743-3')).toBe(true)
   })
 })
