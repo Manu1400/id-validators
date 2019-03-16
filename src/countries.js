@@ -1,7 +1,12 @@
 module.exports = {
+  AR: require('./AR/AR'),
+  AU: require('./AU/AU'),
   BE: require('./BE/BE'),
   BR: require('./BR/BR'),
+  CL: require('./CL/CL'),
+  CN: require('./CN/CN'),
   ES: require('./ES/ES'),
+  FR: require('./FR/FR'),
   GR: require('./GR/GR'),
   LU: require('./LU/LU'),
   NL: require('./NL/NL'),

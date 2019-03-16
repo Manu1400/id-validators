@@ -22,14 +22,30 @@ const polish = (value) => {
   return isPeselValid(value) && validate(value)
 }
 
+const taiwan = (value) => {
+  value = value || ''
+  const taiwanId = require("taiwan-id")
+  const validid = require('validid')
+  return taiwanId.check(value) && validid.twid(value)
+}
+
+const southKorea = (value) => {
+  value = value || ''
+  const validid = require("validid")
+  return validid.krid(value)
+}
+
 module.exports = {
   polish,
-  china: require('validid').cnid,
-  hongKong: require('validid').hkid,
-  taiwan: require('validid').twid,
-  southKorea: require('validid').krid,
+  china: require('./CN/CN').idcard,
+  //hongKong: validid.hkid,
+  taiwan,
+  southKorea,
   czech: czechAndSlovakNationalID, // Czech Republic
   slovak: czechAndSlovakNationalID,
   german,
+  malaysian: require('mykad').isValid,
+  norwegian: require('./NO/NO').ssn,
+  //iran: require('iranian-ssn').validate // iranian national code
   // sriLanka: require("nic-info").nicInfo
 }

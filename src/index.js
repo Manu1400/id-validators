@@ -5,6 +5,8 @@ module.exports = {
   phoneUtils: require('./phone-utils'),
   utils: require('./utils'),
   countries: require('./countries'),
+  isbn: require('./isbn'),
+  iso: require('./iso')
 };
 
 // module.exports.SEssn = require('./src/SE/ssn')

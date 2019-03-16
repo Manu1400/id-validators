@@ -12,3 +12,5 @@ script:
   - jest test/*
   - codecov -t $CODECOV_TOKEN || echo 'Codecov failed to upload'
   - echo "npm test temporarily disabled"
+env:
+  - HUSKY_SKIP_INSTALL=true
