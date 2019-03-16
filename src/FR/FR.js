@@ -40,9 +40,9 @@ const FPS = function (FPSnumber='', platenumber='', date='', key='') {
   }
 
   if (date !== '') {
-    var now = moment(date, "DD-MM-YYYY")
-    var first = moment("01/01/20"+year, "DD-MM-YYYY")
-    var countDay = now.diff(first, 'days') + 1
+    const now = moment(date, "DD-MM-YYYY")
+    const first = moment("01/01/20"+year, "DD-MM-YYYY")
+    const countDay = now.diff(first, 'days') + 1
     if (dayFromFirstJanv !== countDay) {
       //TODO: add a test case
       return false

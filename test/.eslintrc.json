@@ -1,6 +1,7 @@
 {
     "env": {
-      "jasmine": true
+      "jasmine": true,
+      "jest/globals": true
     },
     "extends": [
       "../src/.eslintrc.json",
@@ -8,8 +9,10 @@
       "plugin:unicorn/recommended"
     ],
     "rules": {
+      "no-console": "warn",
       "import/no-nodejs-modules": ["error", {"allow": ["assert"]}],
       "jest/prefer-todo": "warn",
+      "jest/valid-expect": "warn",
       "mocha/no-global-tests": "warn",
       "mocha/no-nested-tests": "error",
       "better/no-exports": "warn",
