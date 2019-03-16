@@ -7,7 +7,7 @@ describe('#NIR', () => {
   const myNIR = nirGenerator.generateNir()
 
   it('auto-test nir-generator', () => {
-    expect(Boolean(myNIR.match(nirGenerator.nirRegex))).toBeTrue()
+    expect(Boolean(myNIR.match(nirGenerator.nirRegex))).to.equal(true)
     expect(myNIR.match(nirGenerator.nirRegex).length).to.equal(1)
   })
 })
@@ -16,18 +16,18 @@ describe('#NIR', () => {
 describe('FPS number validation (France only)', () => {
   // exemple from https://twitter.com/Ooalan/status/972167129586954241
   it('valid real FPS number (Bordeaux), Urbis Park', () => {
-    expect(FPS('21330063500017181068066029', 'EB172HB', '09/03/2018')).toBeTrue()
+    expect(FPS('21330063500017181068066029', 'EB172HB', '09/03/2018')).to.equal(true)
   })
 
   // exemple from https://twitter.com/KinstlerPatrick/status/1017444552033144832
   it('valid real FPS number (Paris 12e), Streeteo', () => {
-    expect(FPS('21750001600019-181193050137', 'DP936HW', '12/07/2018')).toBeTrue()
+    expect(FPS('21750001600019-181193050137', 'DP936HW', '12/07/2018')).to.equal(true)
   })
 
   // example from https://twitter.com/maxence_wp/status/948468476485799936
   it('valid real FPS number (Paris 1e), from MOOVIA, 2018', () => {
     // key from https://fps-stationnement.fr/questions/numero-telepaiement-perdu.php
-    expect(FPS('21750001600019183002025066', 'CE-501-VF', '02/01/2018', '72')).toBeTrue()
+    expect(FPS('21750001600019183002025066', 'CE-501-VF', '02/01/2018', '72')).to.equal(true)
   })
 
   // example from https://twitter.com/JM_1979/status/1086033313490444290
@@ -61,7 +61,7 @@ describe('FPS number validation (France only)', () => {
 
   // example from https://img.bfmtv.com/i/0/0/ec1/9e39968900670213bd9bf29f4771e.jpeg
   it('valid real FPS number (Paris), 2018', () => {
-    expect(FPS('21750001600019-182008114031')).toBeTrue()
+    expect(FPS('21750001600019-182008114031')).to.equal(true)
   })
 
   it('valid plate number but empty FPS number', () => {
