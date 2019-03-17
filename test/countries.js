@@ -2,6 +2,9 @@ const { countries } = require('./../src')
 
 //console.log(countries.AR.cuit("ddd"))
 
+// https://github.com/jest-community/jest-extended#tosatisfyallpredicate
+// https://github.com/jest-community/jest-extended#tobeboolean
+
 const tab = Object.keys(countries).map(key => {
   const country = countries[key]
   Object.keys(country).map(keya => {
