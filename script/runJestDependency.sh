@@ -1,8 +1,8 @@
 #/bin/bash
 
-npm install -g chai
-npm install -g mocha
-npm install -g standard
+#npm install -g chai
+#npm install -g mocha
+#npm install -g standard
 
 npm list --depth=0 --parseable=true --only=prod | tail -n +2 > listDependency.txt
 

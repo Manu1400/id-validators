@@ -13,7 +13,7 @@
     "lint:src": "eslint src/** --format table",
     "lint:dist": "eslint dist/** --format table",
     "depcheck": "depcheck --ignores 'jest-extended,isbn2'",
-    "testDependencies": "./script/testDependencies.sh"
+    "testDependencies": "./script/runJestDepency.sh"
   },
   "napa": {
     "okpd_to_okpd2": "inveksystems/okpd_to_okpd2",
