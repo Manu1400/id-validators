@@ -30,7 +30,17 @@
     "globals": {
       "__DEV__": true
     },
-    "setupFilesAfterEnv": ["jest-extended"]
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    }
   },
   "keywords": [
     "validator",
@@ -50,6 +60,8 @@
     "@brazilian-utils/validators": "^0.1.9",
     "@dgitals/rut": "^1.0.2",
     "@dr-kobros/fin-id": "^0.2.1",
+    "@fczbkk/url-match": "^3.3.5",
+    "@fczbkk/uuid4": "^3.0.0",
     "@inforlabs/npm-typed": "^1.0.0",
     "@lykmapipo/phone": "^0.3.1",
     "@nelsonomuto/gender-info": "^1.0.2",
@@ -201,6 +213,7 @@
     "thai-id-validator": "^1.0.7",
     "tr-idnumbervalidator": "^1.0.1",
     "turkish-id": "^0.1.1",
+    "urn-lib": "^1.1.2",
     "valid-url": "^1.0.9",
     "validate-cif": "0.0.2",
     "validate-document-checker": "0.0.8",
