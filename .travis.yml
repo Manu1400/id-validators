@@ -3,14 +3,18 @@ node_js:
   - "10"
 cache: npm
 install:
-  - npm install -g jest
   - npm install chai
-  - npm install --only=dev
+  - npm install --dev
   - npm install
+  - npm install eslint
+  - npm install -g jest
   - npm install -g codecov
+  - npm install -g chai
+  - npm install -g mocha
+  - npm install -g standard
+  - npm run testDependencies
+  - echo "end of install"
 script:
-  - jest test/*
-  - codecov -t $CODECOV_TOKEN || echo 'Codecov failed to upload'
-  - echo "npm test temporarily disabled"
+  - echo "end of script"
 env:
   - HUSKY_SKIP_INSTALL=true

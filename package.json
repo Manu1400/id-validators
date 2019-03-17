@@ -12,7 +12,8 @@
     "lint:fix": "eslint src/** --fix",
     "lint:src": "eslint src/** --format table",
     "lint:dist": "eslint dist/** --format table",
-    "depcheck": "depcheck --ignores 'jest-extended,isbn2'"
+    "depcheck": "depcheck --ignores 'jest-extended,isbn2'",
+    "testDependencies": "./script/testDependencies.sh"
   },
   "napa": {
     "okpd_to_okpd2": "inveksystems/okpd_to_okpd2",
@@ -31,7 +32,8 @@
       "__DEV__": true
     },
     "setupFilesAfterEnv": [
-      "jest-extended"
+      "jest-extended",
+      "jest-chain"
     ],
     "coverageThreshold": {
       "global": {
@@ -175,6 +177,7 @@
     "nic-info": "0.0.7",
     "nir_validate": "^1.0.2",
     "no-ssn-validator": "^1.2.0",
+    "node-cmd": "^3.0.0",
     "normalize-url": "^4.2.0",
     "norway-postal-codes": "^3.0.0",
     "norwegian-national-id-validator": "^1.2.0",
@@ -255,8 +258,11 @@
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-mocha": "^5.3.0",
     "eslint-plugin-mocha-cleanup": "^1.6.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-objects": "^1.1.1",
     "eslint-plugin-optimize-regex": "^1.1.6",
     "eslint-plugin-perf-standard": "^1.0.3",
+    "eslint-plugin-sonarjs": "^0.3.0",
     "eslint-plugin-this": "^0.2.3",
     "eslint-plugin-unicorn": "^7.1.0",
     "fake-identity": "^1.0.6",
@@ -267,6 +273,7 @@
     "in-interval": "^1.0.0",
     "iso-7064": "^1.0.0",
     "jest": "^24.1.0",
+    "jest-chain": "^1.1.2",
     "jest-extended": "^0.11.1",
     "napa": "^3.0.0",
     "nir-generator": "^0.1.0",
